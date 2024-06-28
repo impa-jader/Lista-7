@@ -1,6 +1,29 @@
 # Lista-7
+"""2"""
+def entre(l: list, n: float):
+    if n>=l[0] and n<=l[1]:
+        return True
+    else:
+        return False
 
-"""3. MISSING INT"""
+def merge_intervals(l: list):
+    ja_foi={}
+    r=[]
+    for i in l:
+        if i not in ja_foi:
+            r_=[k for k in i]
+            ja_foi+=i
+            for q in l:
+                if entre(r_,q[1]) or entre(r_,q[0]):
+                    ja_foi+=q
+                    if q[1]>=r_[1]:
+                        r_[1]=q[1]
+                    if q[1]<=r_[1]:
+                        r_[0]=q[0]
+            r.append(r_)
+
+
+"""3."""
 def missing_int(l: list):
   ordem=[ l[0] + i for i in range(len(l))]
   for k in range(len(l)):
