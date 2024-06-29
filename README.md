@@ -1,4 +1,16 @@
 # Lista-7
+"""1"""
+import matplotlib.pyplot as plt
+import pandas as pd
+
+x= [(3/1000)*i-3/2 for i in range(1001)]
+y= [k**8 -3*k**4  +2*k**3  -2*k**2 -k +2 for k in x]
+#Falta usar o pandas
+plt.plot(x,y)
+plt.title("""Lista 7
+Questão 1""")
+plt.show()
+
 """2"""
 def entre(l: list, n: float):
     if n>=l[0] and n<=l[1]:
