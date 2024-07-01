@@ -191,3 +191,16 @@ if __name__ == "__main__":
     print(v-w)
     print(3*v+w)
 """
+
+# codigo que usa
+import modulo
+
+v=modulo.Vector_3d([1,2,3])
+w=modulo.Vector_3d([3,-4,-5])
+
+print(f"""Dados o vetores:
+      v=[1,2,3]
+      w=[3 ,-4,-5]
+      v-w={v-w}
+      v+3w={v+w*3}
+      """)
