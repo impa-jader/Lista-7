@@ -143,3 +143,20 @@ def is_palindrome(l):
 
 print(is_palindrome(lista.head))# is not palindrome
 print(is_palindrome(listo.head))# is palindrome
+
+
+"""5"""
+class Vector_3d:
+    def __init__(self,vec:list):
+        self.vec=vec
+    
+    def __mul__(self,a: float):
+        return Vector_3d([a*i for i in self.vec])
+    
+    def __str__(self):
+        return str(self.vec)
+
+
+v=Vector_3d([1,2,3])
+w=Vector_3d([3,-4,-5])
+print(v*2)
