@@ -1,11 +1,24 @@
 # Lista-7
 """1"""
-import matplotlib.pyplot as plt
+"""Segundo codigo(o que salva)"""
 import pandas as pd
 
 x= [(3/1000)*i-3/2 for i in range(1001)]
 y= [k**8 -3*k**4  +2*k**3  -2*k**2 -k +2 for k in x]
-#Falta usar o pandas
+
+df_test = pd.DataFrame({"x":x, "y":y})
+df_test.to_csv("test.csv")
+x = df_test["x"]
+y = df_test["y"]
+
+
+"""Segundo codigo(o que importa)"""
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+import matplotlib.pyplot as plt
+import pandas as pd
 plt.plot(x,y)
 plt.title("""Lista 7
 Questão 1""")
