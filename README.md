@@ -146,17 +146,35 @@ print(is_palindrome(listo.head))# is palindrome
 
 
 """5"""
+"""
+# Este é o codigo do Modulo, Salvarei como mod_quest_5
 class Vector_3d:
     def __init__(self,vec:list):
         self.vec=vec
     
-    def __mul__(self,a: float):
+    def __mul__(self,a):# multiplicação por escalar
+        return Vector_3d([a*i for i in self.vec])
+    
+    def __rmul__(self,a):# multiplicação por escalar
         return Vector_3d([a*i for i in self.vec])
     
     def __str__(self):
         return str(self.vec)
+    
+    def __add__(self,other):
+        r=[]
+        for k in range(3):
+            r.append(self.vec[k]+other.vec[k])
+        return Vector_3d(r)
 
+    def __sub__(self,other):
+        return self+other*(-1)
 
-v=Vector_3d([1,2,3])
-w=Vector_3d([3,-4,-5])
-print(v*2)
+if __name__ == "__main__":
+    v=Vector_3d([1,2,3])
+    w=Vector_3d([3,-4,-5])
+    print(v*2)
+    print(v+w)
+    print(v-w)
+    print(3*v+w)
+"""
